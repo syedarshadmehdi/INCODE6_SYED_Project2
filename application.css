@@ -5,6 +5,11 @@ body {
 .container {
   width: 80%;
   margin: 0 auto;
+  text-align: center;
+}
+.container-fluid {
+  width: 80%;
+  margin: 0 auto;
 }
 header {
   background-color: rgb(129, 148, 165);
@@ -42,8 +47,8 @@ nav ul > li > a {
   font-weight: 540;
 }
 .logo {
-    display: block;
-    width: 180px;
+  display: block;
+  width: 180px;
 }
 .logo1 {
   display: block;
@@ -53,85 +58,163 @@ nav ul > li > a {
   height: 200px;
 }
 .centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 40px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 600;
-  }
-  h1 {
-      color: rgb(114, 113, 113);
-      text-align: center;
-      font-size: 40px;
-  }
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 40px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 600;
+}
+h1 {
+  color: rgb(83, 83, 83);
+  text-align: center;
+  font-size: 40px;
+}
+h2 {
+  color: rgb(85, 84, 84);
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  text-align: center;
+}
+* {
+  box-sizing: border-box;
+  border-radius: 1px solid white;
+}
 
-  * {
-    box-sizing: border-box;
-    border-radius: 1px solid white;
-  }
-  
-  body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-  }
-  
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+.row {
+  margin: 0 -5px;
+  width: 135%;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.card0 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 34px;
+  text-align: center;
+  background-color: rgb(173, 180, 187);
+  color: white;
+}
+
+.card1 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 30px;
+  text-align: center;
+  background-color: rgb(173, 180, 187);
+  color: white;
+}
+.card2 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 39px;
+  text-align: center;
+  background-color: rgb(173, 180, 187);
+  color: white;
+}
+.colImg1 {
+  width: 120px;
+  margin-top: 25px;
+}
+
+@media screen and (max-width: 600px) {
   .column {
-    float: left;
-    width: 25%;
-    padding: 0 10px;
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
   }
-  
-  .row {margin: 0 -5px; width: 135%;}
-  
-  
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
- 
-  .card0 {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
-    padding: 34px;
-    text-align: center;
-    background-color: rgb(173, 180, 187);
-    color: white;
-  }
+}
 
-  .card1 {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
-    padding: 30px;
-    text-align: center;
-    background-color: rgb(173, 180, 187);
-    color: white;
-  }
-  .card2 {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
-    padding: 39px;
-    text-align: center;
-    background-color: rgb(173, 180, 187);
-    color: white;
-  }
-  .colImg1 {
-    width: 120px;
-    margin-top: 25px;
-  }
-  
-  @media screen and (max-width: 600px) {
-    .column {
-      width: 100%;
-      display: block;
-      margin-bottom: 20px;
-    }
-  }
 .button {
-    margin-top: 80px;
-    font-size: 40px;
-    color: white;
-    background-color: rgb(129, 148, 165);
-    padding-top: 30px;
-    border-radius: 15px;
+  background-color: rgb(108, 126, 143);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 28px;
+  margin: 4px 2px;
+  border-radius: 15px;
+  margin-top: 50px;
+  font-weight:bold;
+}
+
+.columnOne {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px;
+  text-align: center;
+}
+.columnTwo {
+  float: right;
+  width: 50%;
+  padding: 10px;
+  height: 300px;
+  text-align: center;
+}
+
+.rowTwo:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.img2 {
+  width: 150px;
+  float: left;
+}
+
+footer {
+  background-color: rgb(129, 148, 165);
+}
+footer::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.footLogo {
+  width: 50px;
+  margin-top: 40px;
+  margin-left: 20px;
+  float: left;
+  padding: 10px 0;
+  padding-bottom: 30px;
+}
+h5 {
+  font-size: 25px;
+  text-shadow: 0px 1px 1px black;
+}
+h4 {
+  text-align: center;
+  color: white;
+  font-weight: 300;
+  padding-top: 50px;
+}
+h3 {
+  padding-left: 200px; 
+  font-size: 30px;
+  color: rgb(70, 68, 68);
+  padding-top: 80px;
+}
+.icon {
+  display: flex;
+  letter-spacing: 30px;
+  margin-left:700px;
+}
+.icon > img {
+  width: 40px;
 }
