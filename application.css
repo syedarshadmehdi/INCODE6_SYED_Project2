@@ -1,51 +1,137 @@
 body {
-    margin: 0;
-    font-family:  "Gill Sans", sans-serif;;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .container {
-    width: 80%;
-    margin: 0 auto;
+  width: 80%;
+  margin: 0 auto;
 }
 header {
-    background-color: rgb(142, 155, 167);
+  background-color: rgb(129, 148, 165);
 }
 
 header::after {
-    content: '';
-    display: table;
-    clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
 .logo {
-    float: left;
-    padding: 10px 0;
+  float: left;
+  padding: 10px 0;
 }
 nav {
-    float: right;
+  float: right;
 }
 
 nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    padding-bottom: 30px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  padding-bottom: 30px;
 }
 
 nav li {
-    display: inline-block;
-    margin-left: 40px;
-    padding-top: 40px;
+  display: inline-block;
+  margin-left: 40px;
+  padding-top: 40px;
 }
 nav ul > li > a {
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 540;
-    
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 540;
 }
+.logo {
+    display: block;
+    width: 180px;
+}
+.logo1 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  height: 200px;
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+  }
+  h1 {
+      color: rgb(114, 113, 113);
+      text-align: center;
+      font-size: 40px;
+  }
 
+  * {
+    box-sizing: border-box;
+    border-radius: 1px solid white;
+  }
+  
+  body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  .column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+  }
+  
+  .row {margin: 0 -5px; width: 135%;}
+  
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+ 
+  .card0 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+    padding: 34px;
+    text-align: center;
+    background-color: rgb(173, 180, 187);
+    color: white;
+  }
 
-
-
-
-
-
+  .card1 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+    padding: 30px;
+    text-align: center;
+    background-color: rgb(173, 180, 187);
+    color: white;
+  }
+  .card2 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+    padding: 39px;
+    text-align: center;
+    background-color: rgb(173, 180, 187);
+    color: white;
+  }
+  .colImg1 {
+    width: 120px;
+    margin-top: 25px;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+.button {
+    margin-top: 80px;
+    font-size: 40px;
+    color: white;
+    background-color: rgb(129, 148, 165);
+    padding-top: 30px;
+    border-radius: 15px;
+}
