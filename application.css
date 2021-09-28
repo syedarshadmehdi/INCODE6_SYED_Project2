@@ -4,14 +4,50 @@ body {
   box-sizing: border-box;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.container {
+/* Banner */
+
+.banner {
   width: 80%;
-  margin: 0 auto;
-  text-align: center;
+  margin-left: 165px;
 }
-.container-fluid {
-  width: 80%;
-  margin: 0 auto;
+/* flexbox */
+
+.flexbox-container {
+display: flex;
+justify-content: center;
+}
+
+.flexbox-item {
+  width: 400px;
+  height: 450px;
+  margin: 10px;
+  border: 1px solid rgb(100, 94, 94);
+  background-color: #bac3c9;
+}
+.item-1 {
+  min-height: 100px;
+}
+.item-2 {
+  min-height: 100px;
+}
+.item-3 {
+  min-height: 100px;
+}
+.card0 {
+  text-align: center;
+  color: white;
+  padding: 35px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+  .container-fluid {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
 }
 header {
   background-color: rgb(129, 148, 165);
@@ -86,57 +122,8 @@ h2 {
   border-radius: 1px solid white;
 }
 
-body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
 
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-  }
-}
-.column {
-  float: left;
-  width: 25%;
-  height: 50%;
-  padding: 10px;
-} 
 
-.row {
-  margin: 0 -5px;
-  width: 135%;
-  
-}
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.card0 {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 34px;
-  text-align: center;
-  background-color: rgb(173, 180, 187);
-  color: white;
-}
-
-.card1 {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
-  padding: 30px;
-  text-align: center;
-  background-color: rgb(173, 180, 187);
-  color: white;
-}
-.card2 {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 39px;
-  text-align: center;
-  background-color: rgb(173, 180, 187);
-  color: white;
-}
 .colImg1 {
   width: 120px;
   margin-top: 25px;
@@ -147,8 +134,8 @@ body {
   border: none;
   color: white;
   padding: 15px 32px;
-  text-align: center;
   font-size: 28px;
+  margin-right: 20px;
   margin: 4px 2px;
   border-radius: 15px;
   margin-top: 50px;
@@ -193,7 +180,7 @@ footer::after {
 .footLogo {
   width: 50px;
   margin-top: 40px;
-  margin-left: 20px;
+  margin-left: 30px;
   float: left;
   padding: 10px 0;
   padding-bottom: 30px;
@@ -217,7 +204,7 @@ h3 {
 .icon {
   display: flex;
   letter-spacing: 30px;
-  margin-left:700px;
+  margin-left:900px;
 }
 .icon > img {
   width: 40px;
