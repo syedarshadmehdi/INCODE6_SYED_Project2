@@ -4,44 +4,22 @@ body {
   box-sizing: border-box;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-/* Banner */
-.banner {
-  width: 94%;
-  text-align: center;
-  
-}
-/* flexbox */
 
-.flexbox-container {
-display: flex;
-justify-content: center;
+.logo {
+  display: block;
+  width: 180px;
+  margin-left: 100px;
+  float: left;
+  padding: 10px 0;
 }
+@media screen and  (min-width: 480px) and (max-width: 960px){
+  .container {
+    flex-direction: column;
+    display: flex;
+  } 
+};
 
-.flexbox-item {
-  width: 400px;
-  height: 450px;
-  margin: 10px;
-  box-shadow: 0px 1px 3px black;
-  background-color: #bac3c9;
-}
-.item-1 {
-  min-height: 100px;
-}
-.item-2 {
-  min-height: 100px;
-}
-.item-3 {
-  min-height: 100px;
-}
-.card0 {
-  text-align: center;
-  color: white;
-  padding: 35px;
-  font-size: 17px;
-  font-weight: bold;
-}
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 480px) {
   .container-fluid {
     width: 80%;
     display: block;
@@ -58,37 +36,31 @@ header::after {
   display: table;
   clear: both;
 }
-.logo {
-  float: left;
-  padding: 10px 0;
-}
+
 nav {
   float: right;
+  position: relative;
 }
 
 nav ul {
-  margin: 0;
+  margin: 1rem auto;
   padding: 0;
   list-style: none;
-  padding-bottom: 30px;
+
 }
 
 nav li {
   display: inline-block;
-  margin-right: 50px;
-  padding-top: 40px;
+  margin-right: 20px;
+  padding-top: 20px;
 }
 nav ul > li > a {
   color: white;
   text-decoration: none;
   font-size: 14px;
-  font-weight: 540;
+  flex-direction: column;
 }
-.logo {
-  display: block;
-  width: 180px;
-  margin-left: 100px;
-}
+
 .logo1 {
   display: block;
   margin-left: auto;
@@ -98,13 +70,15 @@ nav ul > li > a {
 }
 .centered {
   position: absolute;
-  top: 50%;
+  top: 65%;
   left: 50%;
+  text-align: center;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 40px;
+  font-size: 30px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: 600;
+  font-weight: bold;
+  width: 100%;
 }
 h1 {
   color: rgb(83, 83, 83);
@@ -123,44 +97,84 @@ h2 {
   border-radius: 1px solid white;
 }
 
+/* BannerPage */
+.subContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.bannerImg {
+  object-fit: cover;
+}
+
+/* flexbox Part 1*/
+
+@media screen and (max-width: 720px) {
+  .flexbox-container {
+   flex-direction: column;
+  }
+}
+.flexbox-container {
+display: flex;
+justify-content: center;
+width: 100%;
+}
+.flexbox-item {
+  width: 400px;
+  min-height: 450px;
+  margin: 10px;
+  box-shadow: 0px 1px 3px black;
+  background-color: #bac3c9;
+}
 .colImg1 {
   width: 120px;
   margin-top: 25px;
 }
+.card0 {
+  text-align: center;
+  color: white;
+  padding: 35px;
+  font-size: 17px;
+  font-weight: bold;
+}
 
-#btn {
+@media screen and (max-width: 480px) {
+  .btn>button {
+    flex-direction: column;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.btn>button {
   font-size: 30px;
-  padding-top: 8px;
+  padding: 15px 32px 15px 32px;
   color: white;
   font-weight: bold;
   border-radius: 10px;
-  text-align: center;
   background-color: rgb(108, 126, 143);
-  box-shadow: 0 0 1px 3px rgba(95, 94, 94, 0.5);
-  width: 400px;
-  height: 70px;
-  margin-left: 520px;
+  box-shadow: 0 1px 2px rgba(105, 103, 103, 0.5);
   margin-bottom: 20px;
   margin-top: 80px;
 }
 
 /* Flex Two Column Layout */
 
-.flex-container {
+.flex-containerTwo {
   display: flex;
   flex-direction: row;
+  width: 100%;
 }
 
 .flex-left {
   width: 50%;
-  height: 50vh;
   margin: 5px;
   padding: 5px;
 }
 
 .flex-right {
   width: 50%;
-  height: 50vh;
   margin: 5px;
   padding: 5px;
 }
@@ -170,14 +184,16 @@ h2 {
   float: left;
 }
 
+@media screen and (max-width: 768px) {
+  footer {
+    margin: auto;
+    display: block;
+  }
+}
 footer {
   background-color: rgb(129, 148, 165);
   width: 100%;
-}
-footer::after {
-  content: "";
   display: table;
-  clear: both;
 }
 
 .footLogo {
@@ -205,9 +221,8 @@ h3 {
   padding-top: 80px;
 }
 .icon {
-  display: flex;
-  letter-spacing: 30px;
-  margin-left:700px;
+  letter-spacing: 20px;
+  text-align: center;
 }
 .icon > img {
   width: 40px;
@@ -227,7 +242,13 @@ h3 {
   padding: 10px;
   height: 300px; 
 }
-.rowAbout:after {
+@media screen and (max-width: 480px) {
+  .cardsOne {
+    margin: auto;
+    
+  }
+}
+.cardsOne:after {
   content: "";
   display: flex;
   clear: both;
@@ -265,7 +286,7 @@ h3 {
   height: 300px; 
 }
 
-.cards {
+.cardsTwo {
   margin-top: 600px;
   margin-bottom: 150px;
   font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;
