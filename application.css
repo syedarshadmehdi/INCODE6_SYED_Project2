@@ -12,12 +12,6 @@ body {
   float: left;
   padding: 10px 0;
 }
-@media screen and  (min-width: 480px) and (max-width: 960px){
-  .container {
-    flex-direction: column;
-    display: flex;
-  } 
-};
 
 @media screen and (max-width: 480px) {
   .container-fluid {
@@ -46,7 +40,6 @@ nav ul {
   margin: 1rem auto;
   padding: 0;
   list-style: none;
-
 }
 
 nav li {
@@ -112,13 +105,13 @@ h2 {
 
 @media screen and (max-width: 720px) {
   .flexbox-container {
-   flex-direction: column;
+    flex-direction: column;
   }
 }
 .flexbox-container {
-display: flex;
-justify-content: center;
-width: 100%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 .flexbox-item {
   width: 400px;
@@ -140,14 +133,14 @@ width: 100%;
 }
 
 @media screen and (max-width: 480px) {
-  .btn>button {
+  .btn > button {
     flex-direction: column;
     display: block;
     margin-left: auto;
     margin-right: auto;
   }
 }
-.btn>button {
+.btn > button {
   font-size: 30px;
   padding: 15px 32px 15px 32px;
   color: white;
@@ -215,7 +208,7 @@ h4 {
   padding-top: 50px;
 }
 h3 {
-  padding-left: 200px; 
+  padding-left: 200px;
   font-size: 30px;
   color: rgb(70, 68, 68);
   padding-top: 80px;
@@ -230,37 +223,37 @@ h3 {
 
 /* About Page */
 
-.colOne {
-  float: left;
-  width: 50%;
-  padding: 10px;
-  height: 300px; 
-}
-.colTwo {
-  float: right;
-  width: 50%;
-  padding: 10px;
-  height: 300px; 
-}
-@media screen and (max-width: 480px) {
-  .cardsOne {
-    margin: auto;
-    
+@media only screen and (max-width: 900px) {
+  .container {
+    /* it place the items in vertical direction */
+    flex-direction: column;
+  }
+
+  .box {
+    margin: 0 0 1rem;
   }
 }
-.cardsOne:after {
-  content: "";
+
+.container {
   display: flex;
-  clear: both;
-  font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;
 }
-.aboutImgOne {
-  width: 550px;
-  margin-left: 100px;
+
+.column-1 {
+  flex-shrink: 0; /* shrinks to 0 to apply 70% width*/
+  flex-basis: 55%; /* sets initial width to 70% */
 }
+.column-2 > img {
+  width: 100%;
+}
+
+.box {
+  padding: 10px;
+  margin: 1rem;
+}
+
 #text1 {
   color: rgb(83, 83, 83);
-  font-size: 35px;
+  font-size: 30px;
   padding-left: 100px;
   line-height: 1.2em;
   letter-spacing: 4px;
@@ -272,52 +265,57 @@ h3 {
   line-height: 1.6em;
 }
 
-.colThree {
-  float: right;
-  width: 50%;
-  padding: 10px;
-  margin-right: 80px;
-  height: 300px; 
-}
-.colFour {
-  float: left;
-  width: 50%;
-  padding: 10px;
-  height: 300px; 
+/* //Another Column */
+
+@media only screen and (max-width: 900px) {
+  .flex-container {
+    /* it place the items in vertical direction */
+    flex-direction: column;
+  }
+
+  .boxTwo {
+    margin: 0 0 1rem;
+  }
 }
 
-.cardsTwo {
-  margin-top: 600px;
-  margin-bottom: 150px;
-  font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;
+.flex-container {
+  display: flex;
+  margin-bottom: 50px;
 }
 
+.column-3 > img {
+  width: 100%;
+  margin-left: 20px;
+}
+
+.column-4 {
+  flex-shrink: 0; /* shrinks to 0 to apply 70% width*/
+  flex-basis: 55%; /* sets initial width to 70% */
+}
 /* //Contact Page */
 
 .textNine {
-font-size: 35px;
-color: rgb(85, 83, 83);
-text-align: center;
+  font-size: 35px;
+  color: rgb(85, 83, 83);
+  text-align: center;
 }
 .textFive {
   margin-left: 300px;
-  font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;
+  font-family: Roboto, "Segoe UI", Tahoma, sans-serif;
   font-weight: 600;
   color: rgb(70, 68, 68);
   font-size: 30px;
-
 }
 .textEleven {
   margin-left: 300px;
-  font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;
+  font-family: Roboto, "Segoe UI", Tahoma, sans-serif;
   font-weight: 500;
   color: rgb(73, 72, 72);
   font-size: 25px;
-
 }
 .rowContact {
   margin-bottom: 100px;
-  font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;
+  font-family: Roboto, "Segoe UI", Tahoma, sans-serif;
 }
 .imgMap {
   width: 900px;
