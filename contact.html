@@ -23,6 +23,36 @@
     <main>
       <img src="Assets/logo_mrcoffee.png" class="logo1" />
 
+      <p class="textNine">Dites nous tout!</p>
+
+        <div class="wrapper">
+        <form class="myForm">
+
+          <label>Nom*
+          <input type="text" name="fname" id="fname" placeholder="Your Name.." required /></label>
+      
+          <label>Prenom*
+          <input type="text" name="lname" id="lname" placeholder="Your Last name.." required /></label>
+      
+          <label>Telephone*
+          <input type="number" name="phone" id="phone" placeholder="Your Phone Number.." required /></label>
+
+          <label>Adresse mail*
+          <input type="text" name="email" id="email" placeholder="Your email.." required /></label>
+      
+          <label>Message*
+          <textarea type="text" name="message"  id="message" placeholder="Tapez votre message ici" /></textarea required></label>
+
+          <input type="submit" value="submit" onclick="myFun()" />
+          <!-- <input type="submit" value="submit"/>
+           -->
+        </form>
+
+      </div>
+
+
+      
+
       <div class="rowContact">
         <p class="textNine">On vous attend !</p>
 
@@ -34,10 +64,6 @@
           Mail : contact@mr-coffee.com</p>
           <img src="Assets/carte_contact.png" class="imgMap">
         </div>
-
-        
-         
-     
     </main>
     
     <footer>
@@ -52,5 +78,7 @@
       </div>
 
     </footer>
+
+    <script src="./form.js"></script>
   </body>
 </html>
