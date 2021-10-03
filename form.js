@@ -1,5 +1,5 @@
 
-
+//SUBMIT FORM
 function onSubmit() {
     var fname = document.getElementById('fname').value;
     var lname = document.getElementById('lname').value;
@@ -14,8 +14,13 @@ formSubmit.addEventListener('click', function (e) {
     e.preventDefault();
 });
 
+<<<<<<< HEAD
 document.getElementById("btn").style.visibility = 'hidden';
 
+=======
+//POPUP BUTTON and POPUP
+document.getElementById("btn").style.visibility = 'hidden';
+>>>>>>> cb9115eb797324a21ffb8b97840ebde80aeb4c4d
 function togglePopup() {
      document.getElementById("popup-1").classList.toggle("active");
      
@@ -25,3 +30,8 @@ function togglePopup() {
 }
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cb9115eb797324a21ffb8b97840ebde80aeb4c4d

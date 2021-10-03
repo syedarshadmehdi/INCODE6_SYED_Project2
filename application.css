@@ -384,11 +384,17 @@ input[type="submit"] {
   margin-top: 10px;
   padding: 10px 32px 10px 32px;
 }
+<<<<<<< HEAD
 
 .submitBtn {
   text-align: center;
 }
 
+=======
+.submitBtn {
+  text-align: center;
+}
+>>>>>>> cb9115eb797324a21ffb8b97840ebde80aeb4c4d
 input[type="submit"]:hover {
   background-color: rgb(79, 82, 85);
 }
