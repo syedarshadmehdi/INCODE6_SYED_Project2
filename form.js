@@ -14,31 +14,14 @@ formSubmit.addEventListener('click', function (e) {
     e.preventDefault();
 });
 
+document.getElementById("btn").style.visibility = 'hidden';
+
 function togglePopup() {
-    document.getElementById("popup-1").classList.toggle("active");
+     document.getElementById("popup-1").classList.toggle("active");
+     
+    // setTimeout(function() {
+    //     document.getElementById("popup-1").classList.toggle("active");
+    // }, 3000);
 }
-
-
-
-
-
-
-
-
-
-
-
-    // const wrapper = document.querySelector('.wrapper'),
-    // myForm = wrapper.querySelectorAll('.myForm'),
-    // submitInput = myForm[0].querySelector('input[type="submit"]');
-
-    // function getDataForm(e) {
-    //     e.preventdefault();
-    //     var formData = new FormData(myForm[0]);
-    //     console.log(formData.get('fname') + ' - ' + formData.get('lname') + ' - ' + formData.get('phone') + ' - ' + formData.get('email') + ' - ' + formData.get('message'));
-    // }
-    // document.addEventListener('DOMContentLoader',function() {
-    //     submitInput.addEventListener('click', getDataForm, false);
-    // }, false);
 
 

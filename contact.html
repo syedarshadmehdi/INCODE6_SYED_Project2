@@ -38,7 +38,7 @@
         </div>
       </div>
 
-      <button onclick="togglePopup()">Show Popup</button>
+      <button onclick="togglePopup()" id="btn">Show Popup</button>
 
       <!-- popup end -->
 
@@ -61,8 +61,11 @@
           <label>Message*
           <textarea type="text" name="message"  id="message" placeholder="Tapez votre message ici" /></textarea required></label>
 
-          <input type="submit" value="submit" onclick="onSubmit()" id="formSubmit"/>
-           <!-- <input type="submit" value="submit"/> -->
+          <div class="submitBtn">
+            <input type="submit" value="submit" onclick="onSubmit(); togglePopup();" id="formSubmit"/>
+          </div>
+          
+      
           
         </form>
 

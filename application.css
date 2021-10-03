@@ -377,14 +377,16 @@ input[type="submit"] {
   color: white;
   padding: 12px 20px;
   border: none;
-  text-align: center;
   border-radius: 10px;
   cursor: pointer;
   margin: auto;
-  margin-left: 40%;
   font-size: x-large;
   margin-top: 10px;
   padding: 10px 32px 10px 32px;
+}
+
+.submitBtn {
+  text-align: center;
 }
 
 input[type="submit"]:hover {
@@ -420,7 +422,7 @@ input[type="submit"]:hover {
   text-align: center;
   padding: 90px;
   box-sizing: border-box;
-  margin: auto;
+  margin-top: 320px;
 }
 
 .imgPopup {
