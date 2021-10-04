@@ -14,24 +14,14 @@ formSubmit.addEventListener('click', function (e) {
     e.preventDefault();
 });
 
-<<<<<<< HEAD
-document.getElementById("btn").style.visibility = 'hidden';
-
-=======
 //POPUP BUTTON and POPUP
 document.getElementById("btn").style.visibility = 'hidden';
->>>>>>> cb9115eb797324a21ffb8b97840ebde80aeb4c4d
 function togglePopup() {
      document.getElementById("popup-1").classList.toggle("active");
      
-    // setTimeout(function() {
-    //     document.getElementById("popup-1").classList.toggle("active");
-    // }, 3000);
+//     setTimeout(function() {
+//         document.getElementById("popup-1").classList.toggle("active");
+//     }, 3000);
 }
 
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cb9115eb797324a21ffb8b97840ebde80aeb4c4d
