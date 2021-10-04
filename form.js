@@ -15,17 +15,17 @@ function validation() {
         formId.classList.add("valid");
         formId.classList.remove("invalid");
         emailReg.innerHTML = "Your Email Address is Valid.";
-        emailReg.style.color = "#008000";
+        emailReg.style.color = "#008000";//green
     } else {
         formId.classList.remove("valid");
         formId.classList.add("invalid");
         emailReg.innerHTML = "Please Enter Valid Email ID";
-        emailReg.style.color = "#ff0000";
+        emailReg.style.color = "#ff0000";//red
     } if (email == "") {
         formId.classList.remove("valid");
         formId.classList.remove("invalid");
         emailReg.innerHTML = "";
-        emailReg.style.color = "#008000";
+        emailReg.style.color = "#008000";//green
     } else {
         return true;
     }
@@ -44,7 +44,7 @@ function onSubmit() {
     if (validation()) {
         document.getElementById("formId").submit;
         console.log(" Name : " + fname + "\n LastName : " + lname + "\n Phone Number : " + phone + "\n Email : " + email + "\n Message : " + message + " \n " + " \n Form Submitted Successfully.....");
-        
+        togglePopup();
     } 
 
 }
