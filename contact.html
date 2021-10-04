@@ -44,7 +44,7 @@
 
 
         <div class="wrapper">
-        <form class="myForm">
+        <form class="myForm" id="formId" novalidate>
 
           <label>Nom*
           <input type="text" name="fname" id="fname" placeholder="Your Name.." required /></label>
@@ -56,13 +56,14 @@
           <input type="number" name="phone" id="phone" placeholder="Your Phone Number.." required /></label>
 
           <label>Adresse mail*
-          <input type="text" name="email" id="email" placeholder="Your email.." required /></label>
+          <input type="text" name="email" id="email" placeholder="Your email.." onkeydown="validation()" required /></label>
+          <span id="emailReg"></span>
       
           <label>Message*
           <textarea type="text" name="message"  id="message" placeholder="Tapez votre message ici" /></textarea required></label>
 
           <div class="submitBtn">
-            <input type="submit" value="submit" onclick="onSubmit(); togglePopup();" id="formSubmit"/>
+            <input type="submit" value="ENVOYER" onclick="onSubmit()" id="formSubmit"/>
           </div>
           
       

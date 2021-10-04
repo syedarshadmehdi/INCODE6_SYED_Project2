@@ -368,6 +368,9 @@ input[type="number"] {
   background-color: rgb(189, 197, 204);
 }
 
+#emailReg {
+  display: block;
+}
 textarea {
   height: 200px;
 }
