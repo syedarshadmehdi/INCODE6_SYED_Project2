@@ -25,51 +25,44 @@
 
       <p class="textNine">Dites nous tout!</p>
 
-      <!-- popup start -->
-
-      <div class="popup" id="popup-1">
-        <div class="overlay"></div>
-        <div class="content">
-          <div class="close-btn" onclick="togglePopup()">FERMER</div>
-          <img src = "Assets/logo_dark.png" class="imgPopup">
-          <p class="textPopup">MERCI</p>
-          <p class="textPopup">Votre message a bien été envoyé !</p>
-          <p class="textPopin">Nous essaierons d’y répondre au mieux dans les plus brefs<br>délais. À bientot chez Mr.Coffee</p>
-        </div>
-      </div>
-
-      <button onclick="togglePopup()" id="btn">Show Popup</button>
-
-      <!-- popup end -->
-
-
+      <div class="modal-overlay"></div>
+      <dialog class="modal">
+        <img src = "./Assets/logo_dark.png" class="imgPopup">
+        <p class="textPopup">MERCI</p>
+        <p class="textPopup">Votre message a bien été envoyé !</p>
+        <p class="textPopin">Nous essaierons d’y répondre au mieux dans les plus brefs<br>délais. À bientot chez Mr.Coffee</p>
+        <button id="close-modal">FERMER</button>
+      </dialog>
+    
         <div class="wrapper">
-        <form class="myForm" id="formId" novalidate>
-
-          <label>Nom*
-          <input type="text" name="fname" id="fname" placeholder="Your Name.." required /></label>
-      
-          <label>Prenom*
-          <input type="text" name="lname" id="lname" placeholder="Your Last name.." required /></label>
-      
-          <label>Telephone*
-          <input type="number" name="phone" id="phone" placeholder="Your Phone Number.." required /></label>
-
-          <label>Adresse mail*
-          <input type="text" name="email" id="email" placeholder="Your email.." onkeydown="validation()" required /></label>
-          <span id="emailReg"></span>
-      
-          <label>Message*
-          <textarea type="text" name="message"  id="message" placeholder="Tapez votre message ici" /></textarea required></label>
-
-          <div class="submitBtn">
-            <input type="submit" value="ENVOYER" onclick="onSubmit()" id="formSubmit"/>
-          </div>
+          <div id="error_message"></div>
+            <form id="formId">
+              <label>Nom*
+              <input type="text" name="fname" id="fname" placeholder="Your Name.." required /></label>
+              
           
-      
+              <label>Prenom*
+              <input type="text" name="lname" id="lname" placeholder="Your Last name.." required /></label>
+              <div id="error_message"></div>   
           
-        </form>
-
+              <label>Telephone*
+              <input type="number" name="phone" id="phone" placeholder="Your Phone Number.." required /></label>
+            
+    
+              <label>Adresse mail*
+              <input type="text" name="email" id="email" placeholder="Your email.." required /></label>
+         
+          
+              <label>Message*
+              <textarea type="text" name="message"  id="message" placeholder="Tapez votre message ici" required></textarea ></label>
+               
+                <div class="submitBtn">
+                  <input type="submit" value="ENVOYER"/>
+                </div>
+              
+              
+            </form>
+    
       </div>
 
 

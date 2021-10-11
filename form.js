@@ -1,59 +1,76 @@
+const formId = document.querySelector("#formId")
+const fname = document.querySelector("#fname")
+const lname = document.querySelector("#lname")
+const phone = document.querySelector("#phone")
+const email = document.querySelector("#email")
+const message = document.querySelector("#message")
 
-function validation() {
-    const formId = document.getElementById("formId");
-    const emailReg = document.getElementById("emailReg");
-    const fname = document.getElementById('fname').value;
-    const lname = document.getElementById('lname').value;
-    const phone = document.getElementById('phone').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-    var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-    if (fname === '' && lname === '' && phone === '' && email === '' && message === '') {
-        alert("Please fill all fields........!!!!");
-        return false;
-    } else if (email.match(pattern)) {
-        formId.classList.add("valid");
-        formId.classList.remove("invalid");
-        emailReg.innerHTML = "Your Email Address is Valid.";
-        emailReg.style.color = "#008000";//green
-    } else {
-        formId.classList.remove("valid");
-        formId.classList.add("invalid");
-        emailReg.innerHTML = "Please Enter Valid Email ID";
-        emailReg.style.color = "#ff0000";//red
-    } if (email == "") {
-        formId.classList.remove("valid");
-        formId.classList.remove("invalid");
-        emailReg.innerHTML = "";
-        emailReg.style.color = "#008000";//green
-    } else {
-        return true;
-    }
+
+//MODALS
+const modal = document.querySelector(".modal")
+const body = document.querySelector("body")
+const modalOverlay = document.querySelector(".modal-overlay")
+const closeModalButton = document.querySelector("#close-modal");
+
+//SUBMIT
+formId.addEventListener("submit", validation)
+formId.setAttribute("novalidate", true)
+closeModalButton.addEventListener("click", closeModal)
+
+//REGEX
+const fnameReg = /^[a-z ,.'-]+$/i
+const lnameReg = /[a-zA-Z]{3,30}/
+const phoneReg = /^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/
+const emailReg = /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/
+const messageReg = /^[^<>]+$/
+
+
+//VALIDATION
+function validation(e) {
+  e.preventDefault();
+  if(isValid(fname, fnameReg) && isValid(lname, lnameReg) && isValid(phone, phoneReg) && isValid(email, emailReg) && isValid(message, messageReg)) {
+    console.log(" Name : " + fname.value + "\n LastName : " + lname.value + "\n Phone Number : " + phone.value + "\n Email : " + email.value + "\n Message : " + message.value + " \n " + " \n Form Submitted Successfully.....")
+    openModal();
+    formId.reset();
+
+  } else if(isValid(fname, fnameReg) == false || fname.value == "") {
+    alert("Please enter your First Name")
+    fname.value=""
+    fname.focus()
+  }  else if(isValid(lname, lnameReg) == false || lname.value == "") {
+    alert("Please enter your Last Name")
+    lname.value=""
+    lname.focus()
+  }  else if(isValid(phone, phoneReg) == false || phone.value == "") {
+    alert("Please enter your Phone Number")
+    phone.value=""
+    phone.focus()
+  }  else if(isValid(email, emailReg) == false || email.value == "") {
+    alert("Please enter your Email Id")
+    email.value=""
+    email.focus()
+  }  else if(isValid(message, messageReg) == false || message.value == "") {
+    alert("Please enter your Message")
+    message.value=""
+    message.focus()
+  }
+  
 
 }
-
-formId.addEventListener('click', function (e) {
-    e.preventDefault();
-});
-function onSubmit() {
-    const fname = document.getElementById('fname').value;
-    const lname = document.getElementById('lname').value;
-    const phone = document.getElementById('phone').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-    if (validation()) {
-        document.getElementById("formId").submit;
-        console.log(" Name : " + fname + "\n LastName : " + lname + "\n Phone Number : " + phone + "\n Email : " + email + "\n Message : " + message + " \n " + " \n Form Submitted Successfully.....");
-        togglePopup();
-    } 
-
+function isValid(element, regex) {
+ return regex.test(element.value);
 }
 
-//formId.addEventListener('click', togglePopup)
-function togglePopup() {
-    document.getElementById("popup-1").classList.toggle("active");
+
+function openModal(){
+  modal.classList.add("active")
+  body.classList.add("modal-open")
+  modalOverlay.classList.add("active")
 }
-document.getElementById('btn').style.visibility = "hidden";
 
-
+function closeModal(){
+  modal.classList.remove("active")
+  body.classList.remove("modal-open")
+  modalOverlay.classList.remove("active")
+}
 
